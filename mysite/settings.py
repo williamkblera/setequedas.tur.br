@@ -25,7 +25,7 @@ SECRET_KEY = 'h#8_(x$^d9k2!v#(2bd(d2^y_2kwqzkg4q+r$d(5b#_5-5))4l'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '[::1]','setequedas.tur.br']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '[::1]','.setequedas.tur.br']
 
 
 # Application definition
