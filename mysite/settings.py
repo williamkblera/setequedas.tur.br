@@ -126,5 +126,6 @@ STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
 # Sobreescrevendo os dados com o setting local
 try:
     from local_settings import *
+    print('location_setting.py')
 except ImportError:
     pass
