@@ -28,12 +28,12 @@ class News(models.Model):
         self.hash = str(h.hexdigest())
 
     def valida_hash(self):
-        ### Ao chamar verifica se a hash ainda é valida ###
-        ### Mais de 7 dias não é valida ###
+        ### Ao chamar verifica se a hash ainda e valida ###
+        ### Mais de 7 dias não e valida ###
         if (self.date_hash):
             dias = timezone.now() - self.date_hash
             if dias.days <= 7:
-                ### Se a hash foi criada a mais de 7 dias já está invalida ###
+                ### Se a hash foi criada a mais de 7 dias já esta invalida ###
                 return True
 
         return False
