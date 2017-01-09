@@ -11,7 +11,7 @@ class News(models.Model):
     email = models.EmailField('E-mail')
     confirm = models.BooleanField('Cadastro confirmado', default=False)
     confirm_date = models.DateTimeField(
-        'Data de confirmação',
+        'Data de confirmacao',
         blank=True,
         null=True
     )
