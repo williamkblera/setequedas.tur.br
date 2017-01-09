@@ -122,3 +122,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
+
+# Sobreescrevendo os dados com o setting local
+try:
+    from local_settings import *
+except ImportError:
+    pass
