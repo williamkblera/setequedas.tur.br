@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+{% load static %}
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Em breve</title>
+<link href="{% static 'tools/style.css' %}" rel="stylesheet" type="text/css" media="screen" />
+<script type="text/javascript" src="{% static 'tools/jquery.min.js' %}"></script>
+<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:600,700|Damion' rel='stylesheet' type='text/css'>
+<meta name="viewport" content="width=device-width, initial-scale = 1.0, user-scalable = no">
+
+</head>
+<body>
+<div class="black"></div>
+<div id="wrapper">
+	<div id="header">
+		<h1>Pousada Paraíso</h1>
+		<h2><strong class="sep-one"></strong>Charmosa, descontraída e aconchegante.<strong class="sep-two"></strong></h2>
+        <br>
+        <h2>O encontro perfeito da beleza natural com o aconchego de uma
+			pousada de ambiente familiar e agradável.</h2>
+
+	</div>
+	<div id="middle">
+		<p>Telefone/Whatsapp</P>
+            <p>(67) 9 9944-8707 / (67) 9 9891-1106</p>
+			{% if is_valid %}
+			<p><span>Obrigado por se cadastrar</span></p>
+			
+
+			{% else %}
+			<p><span>Receba nosso Newsletter</span></p>
+			<p>
+                <form method="post" action="">
+                     {% csrf_token %}
+				    <input name='email' type="email">
+					    <button type="submit" value="Inscrever">Inscreva-se</button>
+				    </input>
+                </form>
+			</p>
+			{% endif %}
+	</div>
+	<div id="footer">
+		<div>
+		<ul class="social">
+			<li class="facebook"><a href="http://www.facebook.com/ppousada.ppa"></li>
+			<li class="twitter"><a href="#"></li>
+			<li class="youtube"><a href="#"></li>
+		</ul>
+		</div>
+	</div>
+</div>
+</body>
+</html>
